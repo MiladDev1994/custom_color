@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "IranSans";
+  src: url("./assets/fonts/iransansfanum.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "B Traffic";
+  src: url("./assets/fonts/btraffic.ttf") format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: IranSans;
+}
+
+
+body {
+  direction: rtl;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; */
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+  position: absolute;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bebebe;
+  border-radius: 2rem;
+}

@@ -1,0 +1,113 @@
+@use "../../Styles/pallet.scss";
+@use "../../Styles/global.scss";
+
+$base-spacing-unit: 1em;
+$half-spacing-unit: calc($base-spacing-unit / 2);
+
+$color-form-highlight: gray;
+
+.table {
+  display: grid;
+  position: relative;
+  .tableContent {
+    overflow-y: auto;
+  }
+
+  .tableRow {
+    display: grid;
+    grid-template-columns: var(--columnsTemplate);
+    gap: 1px;
+    width: 100%;
+    padding: 0;
+    border-left: 1px solid gray;
+    &.tableHeader {
+      overflow-y: none;
+      inset: 0;
+      margin: 0;
+    }
+  }
+  .tableData {
+    border: 1px solid gray;
+    border-top: none;
+    border-left: none;
+  }
+  .tableData,
+  .headerItem {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    height: 100%;
+    padding: 0.5em 0.5em;
+
+    box-sizing: border-box;
+    font-size: 1em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .headerEmptyItem,
+  .tableCheckBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tableCheckBox {
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+  }
+
+  .headerItem {
+    text-transform: uppercase;
+    min-height: 3.5rem;
+    border: 1px solid gray;
+    border-left: none;
+    :last-of-type {
+      border-left: 1px solid gray;
+    }
+  }
+}
+
+.searchContainer {
+  width: clamp(70%, 90%, 100%);
+  margin: 1em auto;
+  padding: 0.5ch 1ch;
+  border-radius: pallet.$border-radius-btn;
+  background-color: lightgray;
+  &:before {
+    content: " ";
+    display: inline-block;
+    width: 0.9rem;
+    height: 0.9rem;
+    background: url("../../../assets/icons/angleLeft.svg") 50% 50%;
+    background-size: cover;
+    z-index: 1;
+  }
+  
+  Input {
+    width: calc(100% - 1.5rem);
+    height: 100%;
+    margin-right: 0.5rem;
+    background-color: lightgray;
+    border: none;
+  }
+}
+
+.checkbox {
+  display: block;
+  width: 0.9em;
+  height: 0.9em;
+  background-color: transparent;
+  margin: 10% auto;
+  border: 1px solid gray;
+  border-radius: 20%;
+  margin: 5px;
+}
+
+.isactive {
+  background: url("../../../assets/icons/angleLeft.svg") center no-repeat;
+  background-color: blue;
+  background-size: 80%;
+}

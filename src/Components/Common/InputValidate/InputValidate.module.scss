@@ -1,0 +1,79 @@
+@use "../../Styles/pallet.scss";
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin-top: 0.625rem;
+    position: relative;
+    input{
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0.75rem 0.625rem;
+        border: 1px solid pallet.$colorLighterGray;
+        border-radius: 5px;
+        // margin-top: 0.625rem;
+        box-shadow: 0 5px 10px #00000015;
+        outline: none;
+        transition: 0.3s;
+        font-size: 1.125rem;
+        box-sizing: border-box;
+        // letter-spacing: 10px;
+    }
+    .inputError {
+        border: 1px solid pallet.$colorRed;
+        box-shadow: 0 5px 10px pallet.$colorLightRed;
+        background-color: pallet.$colorLightRed;
+    }
+    label {
+        color: pallet.$colorDimGray;
+        font-size: 1.125rem;
+        padding: 0 0.3125rem;
+        position: absolute;
+        left: 0.625rem;
+        height: 0.0625rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 48%;
+        transition: 0.3s;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+    .labelActive {
+        background-color: pallet.$colorWhite;
+        color: pallet.$colorDarkGray;
+        top: 0;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+    .labelActiveError {
+        background-color: pallet.$colorLightRed;
+        top: 0;
+        color: pallet.$colorDarkGray;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+    span {
+        color: pallet.$colorRed;
+        font-size: 0.8125rem;
+        padding: 0 0.3125rem;
+        position: absolute;
+        right: 0.5rem;
+        background-color: pallet.$colorLightRed;
+        height: 0.125rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+    }
+
+    .changeType {
+        position: absolute;
+        // left: 50%;
+        // transform: translate(0, 50%);
+        top: calc(48% - 0.7rem);
+        right: 0.9rem;
+        padding: 0;
+    }
+}

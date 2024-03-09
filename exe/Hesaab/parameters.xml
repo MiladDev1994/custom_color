@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<opencv_storage>
+    <healthy>"D:/workspace/DB/sorchin_custom_color_twoD/01/Accept"</healthy>
+    <nonhealthy>"D:/workspace/DB/sorchin_custom_color_twoD/01/Reject"</nonhealthy>
+    <influenceT>0.3</influenceT>
+    <influenceD>0.7</influenceD>
+    <delta>0.48</delta>
+    <area>0.25</area>
+</opencv_storage>

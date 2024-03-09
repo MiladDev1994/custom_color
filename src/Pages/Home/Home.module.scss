@@ -1,0 +1,14 @@
+
+@use "../../Components/Styles/global.scss";
+@use "../../Components/Styles/pallet.scss";
+
+
+.mainContainer {
+    padding: 20px;
+    min-height: 100vh;
+    .main {
+        display: grid;
+        gap: 20px;
+        width: 100%;
+    }
+}

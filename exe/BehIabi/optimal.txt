@@ -1,0 +1,1 @@
+accuracy: 0.900398best Area: 4.57368e-312 best Delta: 4.57368e-312

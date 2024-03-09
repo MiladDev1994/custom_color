@@ -1,0 +1,21 @@
+@use '../../Styles/pallet.scss';
+@use '../../Styles/global.scss';
+
+.Container {
+  min-width: 19em;
+  min-height: 85vh;
+  @include global.CardContainers();
+  @include global.FlexColumn();
+  justify-content: space-between;
+  // overflow: hidden;
+  border-radius: pallet.$border-radius;
+  .title {
+    @include global.titlePreSet();
+  }
+  .childrenContainer {
+    flex: 10 1 100%;
+    width: 100%;
+    padding: 1em 1em;
+    overflow: visible;
+  }
+}

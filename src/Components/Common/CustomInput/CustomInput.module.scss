@@ -1,0 +1,96 @@
+@use "../../Styles/pallet.scss";
+@use "../../Styles/global.scss";
+.Container {
+    width: 100%;
+    height: 100%;
+    @include global.FlexColumn();
+    justify-content: flex-start;
+    align-items: flex-start;
+    .label {
+        text-align: right;
+        padding: 0 0.5rem;
+        border-radius: 0.4rem;
+        margin-bottom: 0.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .inputContainer {
+        display: flex;
+        width: 100%;
+    }
+    .input {
+        box-sizing: border-box;
+        width: 100%;
+        border: pallet.$borderAttrs;
+        text-align: right;
+        padding: 0.75rem 0.5rem;
+        border-radius: 8px;
+        color: black;
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        &:hover,
+        &:active {
+            border: pallet.$borderAttrsHover;
+        }
+        &::placeholder {
+            color: gray;
+            font-family: IranSans !important;
+            font-weight: 400 !important;
+            font-size: 0.875rem;
+        }
+    }
+    .havePerfix {
+        border-right: none;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .haveSuffix {
+        border-left: none;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .suffix, .prefix {
+        padding: 0.75rem 0.5rem;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        color: gray;
+        text-align: center;
+        border: pallet.$borderAttrs;
+        white-space: nowrap;
+        vertical-align: middle;
+        display: grid;
+        place-items: center;
+    }
+    .suffix {
+        border-radius: 8px 0px 0px 8px;
+    }
+    .prefix {
+        border-radius: 0px 8px 8px 0px;
+    }
+    textarea {
+        resize: none;
+        height: 100%;
+        overflow-y: scroll;
+        &:hover,
+        &:active {
+            border: pallet.$borderAttrsHover;
+        }
+        &::placeholder {
+            color: gray;
+            font-family: IranSans !important;
+            font-weight: 400 !important;
+            font-size: 0.875rem;
+        }
+    }
+}
+
+.labelRequired::after {
+    content: "*";
+    color: pallet.$colorDarkRed;
+    font-size: 1rem;
+}

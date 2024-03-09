@@ -1,0 +1,110 @@
+@use "../../Styles/pallet.scss";
+@use "../../Styles/global.scss";
+.dropDown {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .label {
+        text-align: right;
+        padding: 0 0.5rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0.4rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .button {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        width: 100%;
+        border: pallet.$borderAttrs;
+        text-align: right;
+        padding: 0.75em 0.5em;
+        border-radius: 8px;
+        height: 3em;
+        color: black;
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        .input {
+            border: none;
+            padding: 0;
+            margin: 0;
+            width: 7ch;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        &::after {
+            display: inline-block;
+            position: absolute;
+            content: " ";
+            filter: opacity(0.5);
+            background-image: url("../../../assets//icons/angleLeft.svg");
+            background-size: 0.5em 0.5em;
+            height: 0.5em;
+            width: 0.5em;
+            top: 40%;
+            left: 5%;
+        }
+        &:hover,
+        &:active {
+            border: pallet.$borderAttrsHover;
+        }
+    }
+    .selected {
+        color: black;
+    }
+    .listContainer {
+        position: relative;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        .list {
+            box-sizing: border-box;
+            width: 100%;
+            background: pallet.$colorWhite;
+            // border: pallet.$thinBorderAttrs;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            position: absolute;
+            overflow: auto;
+            left: 0;
+            z-index: 1;
+        }
+        .item {
+            box-sizing: border-box;
+            width: 100%;
+            border-bottom: pallet.$thinBorderAttrs;
+            text-align: right;
+            padding: 0.15rem 0.5rem;
+            color: black;
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: pointer;
+        }
+    }
+    .carret {
+      display: grid;
+      place-Items: center;
+      align-Self: center;
+    }
+}
+
+.notSelected {
+    color: gray;
+    font-family: IranSans !important;
+    font-weight: 400 !important;
+    font-size: 0.875rem;
+}
+
+.labelRequired::after {
+    content: "*";
+    color: pallet.$colorDarkRed;
+    font-size: 1rem;
+}

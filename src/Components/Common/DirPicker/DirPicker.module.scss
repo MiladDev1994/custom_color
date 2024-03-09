@@ -1,0 +1,32 @@
+@use '../../Styles/pallet.scss';
+@use '../../Styles/global.scss';
+.container {
+    > p {
+        padding: 5px 0;
+    }
+    .pickerContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 10px;
+        .customInputContainer {
+            width: 50em;
+            flex: auto;
+            .input {
+                direction: ltr;
+                text-align: left;
+            }
+        }
+        .btn {
+            flex: none;
+            border-radius: 5px;
+            padding: 0 10px;
+        }
+    }
+}
+.labelRequired::after {
+    content: "*";
+    color: darkred;
+    font-size: 1rem;
+}
